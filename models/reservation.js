@@ -61,6 +61,18 @@ class Reservation {
 	get notes() {
 		return this._notes;
 	}
+
+	/** getter and setter for numGuests */
+
+	set numGuests(value) {
+		if (value < 1)
+			throw new Error("Reservations must be for at least one person.");
+		this._numGuests = value;
+	}
+
+	get numGuests() {
+		return this._numGuests;
+	}
 }
 
 module.exports = Reservation;
