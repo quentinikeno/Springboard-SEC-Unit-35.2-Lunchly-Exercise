@@ -55,8 +55,8 @@ class Customer {
 
 	/** return first and last names joined by a space. */
 
-	static fullname() {
-		return `${this.first_name} ${this.last_name}`;
+	fullName() {
+		return `${this.firstName} ${this.lastName}`;
 	}
 
 	/** get all reservations for this customer. */
