@@ -90,7 +90,7 @@ class Customer {
 
 	/** return first and last names joined by a space. */
 
-	fullName() {
+	get fullName() {
 		return `${this.firstName} ${this.lastName}`;
 	}
 
@@ -118,16 +118,6 @@ class Customer {
 				[this.firstName, this.lastName, this.phone, this.notes, this.id]
 			);
 		}
-	}
-
-	/** getter and setter for notes */
-
-	set notes(value) {
-		this._notes = value || "";
-	}
-
-	get notes() {
-		return this._notes;
 	}
 }
 

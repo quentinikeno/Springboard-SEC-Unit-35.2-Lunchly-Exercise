@@ -51,6 +51,16 @@ class Reservation {
 		);
 		this.id = result.rows[0].id;
 	}
+
+	/** getter and setter for notes */
+
+	set notes(value) {
+		this._notes = value || "";
+	}
+
+	get notes() {
+		return this._notes;
+	}
 }
 
 module.exports = Reservation;
