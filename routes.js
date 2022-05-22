@@ -13,7 +13,7 @@ router.get("/", async function (req, res, next) {
 	try {
 		const { search } = req.query;
 		let customers = search
-			? Customer.searchByName(search)
+			? await Customer.searchByName(search)
 			: await Customer.all();
 		return res.render("customer_list.html", { customers });
 	} catch (err) {
