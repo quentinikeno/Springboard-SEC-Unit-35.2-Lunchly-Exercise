@@ -73,6 +73,20 @@ class Reservation {
 	get numGuests() {
 		return this._numGuests;
 	}
+
+	/** getter and setter for startAt */
+
+	set startAt(value) {
+		if (value instanceof Date && !isNaN(value)) {
+			this._startAt = value;
+		} else {
+			throw new Error("A date is required for reservations.");
+		}
+	}
+
+	get startAt() {
+		return this._startAt;
+	}
 }
 
 module.exports = Reservation;
