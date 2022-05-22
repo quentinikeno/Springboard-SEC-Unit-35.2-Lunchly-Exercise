@@ -119,6 +119,16 @@ class Customer {
 			);
 		}
 	}
+
+	/** getter and setter for notes */
+
+	set notes(value) {
+		this._notes = value || "";
+	}
+
+	get notes() {
+		return this._notes;
+	}
 }
 
 module.exports = Customer;
