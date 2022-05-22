@@ -87,6 +87,18 @@ class Reservation {
 	get startAt() {
 		return this._startAt;
 	}
+
+	/** getter and setter for customerID */
+
+	set customerID(value) {
+		if (this._customerId && value !== this.customerID)
+			throw new Error("Customer ID cannot be changed.");
+		this._customerId = value;
+	}
+
+	get customerID() {
+		return this._customerId;
+	}
 }
 
 module.exports = Reservation;
